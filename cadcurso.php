@@ -4,7 +4,7 @@
     $codigo = $_POST['txtcodigo'];
     $descricao = $_POST['txtdescricao'];
 
-    require 'conexao.php';
+    require_once 'conexao.php';
 
     if ($con) {
         //conexão ok

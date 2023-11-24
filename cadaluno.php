@@ -3,11 +3,11 @@
 
     $matricula = $_POST['txtmatricula'];
     $nome = $_POST['txtnome'];
-    $endereco = $_POST['txtendereco']; 
+    $endereco = $_POST['txtendereco'];
     $cidade = $_POST['txtcidade'];
     $codigocurso = $_POST['curso'];
 
-    require 'conexao.php';
+    require_once 'conexao.php';
 
     if ($con) {
         //conexão ok

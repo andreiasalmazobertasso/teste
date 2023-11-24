@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,7 @@
 
     <?php
         ini_set('default_charset', 'UTF-8');
-        require 'conexao.php';
+        require_once 'conexao.php';
         mysqli_set_charset($con,'utf8');
         if ($con)
         {
@@ -20,9 +21,10 @@
 
     <form align="center" action="cadaluno.php" method="POST">
         <table align="center" border="1" width="740">
+			<caption></caption>
             <tr>
-                <td bgcolor=#606060 align="center"><font color="#FFFFFF">Cadastro de Aluno</font></td>
-            </tr>
+				<th align="center" bgcolor="#A9A9A9">Cadastro de Aluno</th>
+			</tr>
             <tr>
                 <td>Matrícula:  <input type="text" size="15" name="txtmatricula"></td>
             </tr>
@@ -36,7 +38,7 @@
                 <td>Cidade:  <input type="text" size="50" name="txtcidade"></td>
             </tr>
             <tr>
-                <td>Curso: 
+                <td>Curso:
                     <select name="curso">
                         <option value="null">Selecione...</option>
                         <?php
@@ -49,7 +51,7 @@
 
                     </select>
       
-                </td> 
+                </td>
             </tr>
             <tr>
                 <td><input type="submit" value="Enviar"></td>

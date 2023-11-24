@@ -1,7 +1,7 @@
 <?php
     ini_set('default_charset','UTF-8');
     $matricula = $_GET['id'];
-    require 'conexao.php';
+    require_once 'conexao.php';
     if ($con) {
         //conexão ok
         mysqli_set_charset($con,'utf8');

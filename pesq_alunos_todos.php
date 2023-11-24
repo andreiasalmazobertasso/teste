@@ -8,7 +8,7 @@
 <body>
     <?php
         ini_set('default_charset', 'UTF-8');
-        require 'conexao.php';
+        require_once 'conexao.php';
         mysqli_set_charset($con,'utf8');
         if ($con)
         {
