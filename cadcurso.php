@@ -23,8 +23,4 @@
     }
     echo "<p align='center'><a href='index.html'>Menu Principal</a></p>";
 
-
-
-
-
 ?>

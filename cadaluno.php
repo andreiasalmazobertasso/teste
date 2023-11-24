@@ -3,16 +3,16 @@
 
     $matricula = $_POST['txtmatricula'];
     $nome = $_POST['txtnome'];
-    $endereco = $_POST['txtendereco'];
+    $endereco = $_POST['txtendereco']; 
     $cidade = $_POST['txtcidade'];
     $codigocurso = $_POST['curso'];
 
-    require_once 'conexao.php';
+    require 'conexao.php';
 
     if ($con) {
         //conexão ok
         mysqli_set_charset($con,'utf8');
-        $sql="insert into alunos (alu_matricula, alu_nome, alu_endereco, alu_cidade, cur_codigo) values ($matricula,'$nome','$endereco','$cidade',$codigocurso)";
+        $sql="insert into alunos values ($matricula,'$nome','$endereco','$cidade',$codigocurso)";
         if (mysqli_query($con,$sql)){
             echo "Aluno cadastrado com sucesso";
         }
@@ -25,9 +25,4 @@
         echo "Não foi possível conectar com o Banco de Dados.";
     }
     echo "<p align='center'><a href='index.html'>Menu Principal</a></p>";
-
-
-
-
-
 ?>
